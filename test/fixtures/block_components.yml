@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  block_id: MyString
+  component_id: MyString
+  number_of_components: MyString
+
+two:
+  block_id: MyString
+  component_id: MyString
+  number_of_components: MyString
