@@ -3,9 +3,9 @@ class BlocksController < ApplicationController
     
       # GET /blocks
       def index
-        @blocks = block.all
+        @blocks = Block.all
     
-        render json: @blocks
+        render json: @blocks, include: [:block_components]
       end
     
       def show
