@@ -12,20 +12,20 @@
 
 ActiveRecord::Schema.define(version: 2020_11_28_211848) do
 
-  create_table "blocks", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.string "size"
+  create_table "block_components", force: :cascade do |t|
+    t.integer "block_id"
+    t.integer "component_id"
+    t.integer "number_of_components"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "blocks_components", force: :cascade do |t|
+  create_table "blocks", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "size"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"block_id\"", name: "index_blocks_components_on_block_id"
-    t.index "\"component_id\"", name: "index_blocks_components_on_component_id"
-    t.index "\"number_of_components\"", name: "index_blocks_components_on_number_of_components"
   end
 
   create_table "components", force: :cascade do |t|
