@@ -5,7 +5,7 @@ class BlocksController < ApplicationController
       def index
         @blocks = Block.all
     
-        render json: @blocks, include: [:block_components]
+        render json: @blocks, include: [:block_components, :components]
       end
     
       def show
