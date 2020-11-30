@@ -3,7 +3,7 @@ class ComponentsController < ApplicationController
 
   # GET /components
   def index
-    @components = component.all
+    @components = Component.all
 
     render json: @components
   end
