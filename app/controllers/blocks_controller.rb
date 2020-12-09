@@ -36,7 +36,21 @@ class BlocksController < ApplicationController
       def destroy
         @block.destroy
       end
-    
+      def small 
+        @blocks = Block.small
+        render json: @blocks, include: [:block_components, :components]
+
+      end
+      def large 
+        @blocks = Block.large
+        render json: @blocks, include: [:block_components, :components]
+
+      end
+      def either
+        @blocks = Block.either
+        render json: @blocks, include: [:block_components, :components]
+
+      end
       private
         # Use callbacks to share common setup or constraints between actions.
         def set_block
